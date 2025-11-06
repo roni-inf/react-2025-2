@@ -1,0 +1,42 @@
+/* Faz o rodapé sempre ficar no final da página */
+.footer {
+  position: fixed; /* Fixa o footer na tela */
+  bottom: 0; /* Cola no fundo */
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  background-color: aliceblue;
+  color: darkblue;
+  text-align: center;
+  padding: 10px 0; /* Espaçamento interno */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave no topo */
+}
+
+/* Ícones sociais */
+.social_list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.social_list li {
+  margin: 0 1em;
+}
+
+.social_list svg {
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Efeito hover nos ícones */
+.social_list svg:hover {
+  transform: scale(1.5);
+  color: royalblue;
+}
+
+.copy_right {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
