@@ -10,7 +10,7 @@ const AppRouter = () => {
     <Routes>
       <Route path="/" element={<Feed />}></Route>
       <Route path="/posts" element={<Post />}></Route>
-      <Route path="/update" element={<Update />}></Route>
+      <Route path="/update/:id" element={<Update />}></Route>
       <Route path="/more" element={<More />}></Route>
     </Routes>
   );
