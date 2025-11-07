@@ -18,6 +18,11 @@ const Feed = () => {
       });
   }, []);
 
+  function apagarPost(id) {
+    axios.delete(`https://690a7b021a446bb9cc22a8ad.mockapi.io/posts/${id}`);
+    setPosts(posts.filter((post) => post.id !== id));
+  }
+
   return (
     <div>
       <HeaderMain />
@@ -30,8 +35,7 @@ const Feed = () => {
               </header>
               <div className={styles.line}></div>
 
-              <p>{post.descricao}
-              </p>
+              <p>{post.descricao}</p>
 
               <div className={styles.btns}>
                 <div className={styles.btnEdit}>
@@ -41,13 +45,13 @@ const Feed = () => {
                 </div>
 
                 <div className={styles.btnReadMore}>
-                  <Link to={"/more"}>
+                  <Link to={`/more/${post.id}`}>
                     <button>Leia Mais</button>
                   </Link>
                 </div>
 
                 <div className={styles.btnDelete}>
-                  <button>Apagar</button>
+                  <button onClick={() => apagarPost(post.id)}>Apagar</button>
                 </div>
               </div>
             </div>

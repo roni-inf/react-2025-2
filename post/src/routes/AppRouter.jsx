@@ -11,7 +11,7 @@ const AppRouter = () => {
       <Route path="/" element={<Feed />}></Route>
       <Route path="/posts" element={<Post />}></Route>
       <Route path="/update/:id" element={<Update />}></Route>
-      <Route path="/more" element={<More />}></Route>
+      <Route path="/more/:id" element={<More />}></Route>
     </Routes>
   );
 };
