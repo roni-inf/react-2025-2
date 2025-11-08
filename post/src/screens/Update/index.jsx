@@ -36,7 +36,7 @@ const Update = () => {
 
   useEffect(() => {
     axios
-      .get(`https://690a7b021a446bb9cc22a8ad.mockapi.io/posts/${id}`)
+      .get(`http://localhost:8080/posts/${id}`)
       .then((response) => {
         reset(response.data);
       });
@@ -44,7 +44,7 @@ const Update = () => {
 
   const addPost = (data) => {
     axios
-      .put(`https://690a7b021a446bb9cc22a8ad.mockapi.io/posts/${id}`, data)
+      .put(`http://localhost:8080/posts/${id}`, data)
       .then(() => {
         console.log("deu tudo certo");
         navigate("/");

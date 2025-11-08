@@ -9,7 +9,7 @@ const Feed = () => {
 
   useEffect(() => {
     axios
-      .get("https://690a7b021a446bb9cc22a8ad.mockapi.io/posts")
+      .get("http://localhost:8080/posts")
       .then((response) => {
         setPosts(response.data);
       })
@@ -19,7 +19,7 @@ const Feed = () => {
   }, []);
 
   function apagarPost(id) {
-    axios.delete(`https://690a7b021a446bb9cc22a8ad.mockapi.io/posts/${id}`);
+    axios.delete(`http://localhost:8080/posts/${id}`);
     setPosts(posts.filter((post) => post.id !== id));
   }
 

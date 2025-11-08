@@ -10,7 +10,7 @@ const More = () => {
 
   useEffect(() => {
     axios
-      .get(`https://690a7b021a446bb9cc22a8ad.mockapi.io/posts/${id}`)
+      .get(`http://localhost:8080/posts/${id}`)
       .then((response) => {
         setReadMore(response.data);
       });

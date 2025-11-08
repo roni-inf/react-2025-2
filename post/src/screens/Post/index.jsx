@@ -32,7 +32,7 @@ const Post = () => {
 
   const addPost = (data) => {
     axios
-      .post("https://690a7b021a446bb9cc22a8ad.mockapi.io/posts", data)
+      .post("http://localhost:8080/posts", data)
       .then(() => {
         console.log("deu tudo certo");
         navigate("/")
